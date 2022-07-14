@@ -8,6 +8,14 @@ import { AdminComponent } from './admin/admin.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ListComponent } from './list/list.component';
+import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
+
+const appRoutes: Routes = [
+  {path: 'login', component: LoginComponent},
+  {path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
+  { path: "**", redirectTo: "/" }
+];
 
 @NgModule({
   declarations: [
@@ -20,9 +28,10 @@ import { ListComponent } from './list/list.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)  
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

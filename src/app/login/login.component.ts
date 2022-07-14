@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+     private routes: Router, 
+     private service: ApiService
+    ) { }
+  
+    msg = "";
+    ngOnInit() { }
 
-  ngOnInit(): void {
+  submit(uname: string, p: string) {
+    var output = this.service.loginAuthentication(uname, p);
+    if (output == true) {
+      this.routes.navigate(['/admin']);
+    }
+    else {
+      this.msg = 'Invalid username or password';
+    }
+
+
   }
 
 }
