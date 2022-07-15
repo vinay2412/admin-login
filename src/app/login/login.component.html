@@ -1,11 +1,13 @@
-<header class="header">Welcome</header>
-<div class="main">
-    <label>Username</label>
-    <input type="text" #u1 /><br>
-    <label>Password</label>
-    <input type="password" #p2 /><br />
-    <button (click)="submit(u1.value, p2.value)">Login</button>
-    <br />
-    <span>{{ msg }}</span>
-</div>
-<footer class="footer"></footer>
+<div class="login-box">
+    <h1>Welcome</h1>
+<form>
+   <label>UserName </label><br>
+    <input type="text"  #u1 placeholder="Enter username" required><br>
+  <label>Password</label><br>
+   <input type="password" #p2 placeholder="Enter password" required><br>
+ <input (click)="submit(u1.value, p2.value)" type="Submit" name="Save" value="Login"> 
+   <input type="Reset" name="Clean"><br>
+   <span style="color: red;">{{ msg }}</span>
+
+</form>
+</div>   

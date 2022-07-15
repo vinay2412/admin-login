@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   submit(uname: string, p: string) {
     var output = this.service.loginAuthentication(uname, p);
     if (output == true) {
-      this.routes.navigate(['/admin']);
+      this.routes.navigate(['/employee']);
     }
     else {
       this.msg = 'Invalid username or password';
