@@ -8,9 +8,10 @@ export class ApiService {
   constructor() { }
 
   loginAuthentication(uname: string, pwd: string) {
-    if (uname == "admin" && pwd == "admin123") {
+    if (uname == "admin" && pwd == "123456") {
       localStorage.setItem('username', "admin");
-      return true;
+      localStorage.setItem('username', "employee");
+      return true;  
     }
     else {
       return false;

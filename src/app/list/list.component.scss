@@ -1,0 +1,28 @@
+h2{
+    background-color: skyblue;
+    padding: 15px;
+    margin-top: -10px;
+}
+.main{
+    background-color: darkslategray;
+    padding: 15px;
+    height: 589px;
+    margin-top: -10px;
+}
+.logout{
+    float: right;
+    margin-right: 15px;
+    background: transparent;
+    font-size: 22px;
+    border: none;
+    color: black;
+    cursor: pointer; 
+}
+.table-from{
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 10px;
+    border-color: grey;
+}

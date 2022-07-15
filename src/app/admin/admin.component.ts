@@ -12,4 +12,13 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logout(){
+
+  }
+edit(){
+
+}
+delete(){
+  
+}
 }

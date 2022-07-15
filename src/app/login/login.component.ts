@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
       this.routes.navigate(['/employee']);
     }
     else {
+      this.routes.navigate(['/admin']);
       this.msg = 'Invalid username or password';
     }
 

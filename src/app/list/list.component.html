@@ -1,1 +1,24 @@
-<p>list works!</p>
+<div class="main">
+    <h1 style="text-align: center; color:white;"> Feedback list</h1>
+    <table class="table-from">
+        <thead class="text-white ">
+            <th>Project Name</th>
+            <th>Rating</th>
+            <th>Comments</th>
+            <th>MagRating</th>
+            <th>MagComment</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <td>Admin</td>
+            <td>Admin</td>
+            <td>Admine</td>
+            <td>Admin</td>
+            <td>Admin</td>
+            <td>
+                <button type="button" class="btn btn-primary" (click)="edit()">Edit</button>
+                <button style="margin-left: 10px;" class="btn btn-danger"  (click)="delete()">Delete</button>
+            </td>
+        </tbody>
+    </table>
+</div>

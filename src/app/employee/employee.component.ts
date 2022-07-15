@@ -11,5 +11,7 @@ export class EmployeeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  logout(){
+      
+  }
 }
